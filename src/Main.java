@@ -12,7 +12,8 @@ public class Main  {
       HotDrink temperature  = new HotDrink();// экземпляр HotDrink
       temperature.setTemperature(10);// задаем значение температуры
       HotDrinkVendingMachine temp_product = new HotDrinkVendingMachine();// экземпляр HotDrinkVendingMachine
-      temp_product.getProduct("шоколад", 100, temperature.getTemperature());// вызываем функцию поиска нужного товара
+
+      temp_product.getProduct("шоколад", 100, temperature.getTemperature(),List<Product> productList);// вызываем функцию поиска нужного товара
 
         }
 
