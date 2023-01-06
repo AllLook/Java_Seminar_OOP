@@ -24,4 +24,12 @@ public class Ets extends Product {
     public void setVolume(double volume) {
         this.volume = volume;
     }
+
+    @Override
+    public String toString() {
+        return "Ets{" +
+                "wight = " + wight +
+                ", volume = " + volume + "name " + getName() + "price " + getPrice() +
+                '}';
+    }
 }

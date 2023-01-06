@@ -3,17 +3,14 @@ import java.util.List;
 
 public class Main  {
     public static void main(String[] args) {
-        //List<VendingMachine> vm = new ArrayList<>();
-        //vm.add(new VendingMachine()); // добавляет в List обьекты класса со всеми их оределенными в этих классах переменными и методами этих классов?
-        //vm.add(new DrinksVendingMachine());
-        // for(VendingMachine i : vm){
-        //i.restore();
+      VendingMachine productList = new VendingMachine(); // создаем обьект из VendingMachine
+      List<Product> listProduct = productList.getProductList();// получаем лист который заполняется в VendingMachine но он пуст,почему, он же заполнен в VendingMachine?
+      HotDrink tempProduct = new HotDrink("Кола",  100 ,  10.0 );// экземпляр HotDrink
+      HotDrinkVendingMachine temp_product = new HotDrinkVendingMachine("Cola", 100.0, 50.0, 20);// экземпляр HotDrinkVendingMachine
+      System.out.print(tempProduct);
+      System.out.print(listProduct);
 
-      HotDrink temperature  = new HotDrink();// экземпляр HotDrink
-      temperature.setTemperature(10);// задаем значение температуры
-      HotDrinkVendingMachine temp_product = new HotDrinkVendingMachine();// экземпляр HotDrinkVendingMachine
-
-      temp_product.getProduct("шоколад", 100, temperature.getTemperature(),List<Product> productList);// вызываем функцию поиска нужного товара
+      temp_product.getProduct("шоколад", 100.0, 10.0, 100.0, listProduct);// вызываем функцию поиска нужного товара
 
         }
 
